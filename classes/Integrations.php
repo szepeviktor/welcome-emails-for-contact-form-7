@@ -50,7 +50,7 @@ class Integrations {
             AutomationApi::register_event_type('cf7_' . sanitize_key($form->id()), 'CF7 Form "' . $form->title() . '" has been submitted', $fields);
         }
 
-        // Reset the CF7 instance otherwise CF7 does not work correcly
+        // Reset the CF7 instance otherwise CF7 does not work correctly
         \WPCF7_ContactForm::get_instance(null);
 
         // Maybe to be replaced with "wpcf7_submit"

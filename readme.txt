@@ -75,7 +75,7 @@ Install [WP Crontrol](https://wordpress.com/plugins/wp-crontrol/) to check the s
 
 = Emails do not look good on Outlook, Gmail, ... =
 
-I do my best to create fully compatibile emails, but clients, especially Outlook and Gmail used to read non
+I do my best to create fully compatible emails, but clients, especially Outlook and Gmail used to read non
 Google mail accounts, have a lot of limitation. Anyway, send us a screenshot using my
 [contact page](https://www.satollo.net/about), we're more than happy to check and solve the problem, is possible.
 

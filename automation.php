@@ -62,7 +62,7 @@ class Automation {
 
         \AutomationApi::init();
 
-        // Does it make sense to initilize them? Or it's better to create a "getAAAManager()"?
+        // Does it make sense to initialize them? Or it's better to create a "getAAAManager()"?
         EventManager::init();
         ActionManager::init();
         Composer::init();
