@@ -1,0 +1,246 @@
+* {
+    --atm-orange: #ea7826;
+    --atm-orange-light: #f79a25;
+    --atm-orange-dark: #cb2138;
+
+    --atm-violet: #662f8f;
+    --atm-violet-dark: #282661;
+    --atm-violet-light: #9e2165;
+}
+
+/* STATUS */
+* {
+    --atm-status-green: hsl(140, 70%, 22%);
+    --atm-status-green-bg: hsl(140, 70%, 85%);
+
+    --atm-status-purple-bg: hsl(282, 43%, 90%);
+    --atm-status-purple: hsl(282, 43%, 37%);
+
+    --atm-status-red-bg: hsl(0, 100%, 90%);
+    --atm-status-red: hsl(0, 100%, 33%);
+
+    --atm-status-orange-bg: hsl(17, 82%, 92%);
+    --atm-status-orange: hsl(17, 82%, 43%);
+
+    --atm-status-blue-bg: hsl(204, 70%, 90%);
+    --atm-status-blue: hsl(204, 70%, 40%);
+
+
+    --atm-status-gray-bg: #eee;
+    --atm-status-gray: #444;
+
+    --atm-status-gray-bg: hsl(219, 100%, 90%);
+    --atm-status-gray: hsl(219, 100%, 27%);
+
+    --atm-led-green: hsl(140, 70%, 40%);
+    --atm-led-gray: #ccc;
+}
+
+span.atm-status {
+    font-weight: bold;
+    line-height: normal;
+    padding: 3px 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: .75rem;
+    border: 0;
+    white-space: nowrap;
+    width: 120px;
+    display: block;
+    text-align: center;
+}
+
+span.atm-status.atm-status--unprocessed {
+    background-color: var(--atm-status-purple-bg);
+    color: var(--atm-status-purple);
+}
+
+span.atm-status.atm-status--processed {
+        background-color: var(--atm-status-green-bg);
+    color: var(--atm-status-green);
+
+}
+
+/*
+span.tnp-email-status.tnp-email-status--paused {
+    background-color: var(--atm-status-gray-bg);
+    color: var(--atm-status-gray);
+}
+span.tnp-email-status.tnp-email-status--scheduled {
+    background-color: var(--atm-status-blue-bg);
+    color: var(--atm-status-blue);
+}
+
+span.atm-status.atm-status--processed {
+    background-color: var(--atm-status-orange-bg);
+    color: var(--atm-status-orange);
+}
+
+span.tnp-email-status.tnp-email-status--error {
+    background-color: var(--atm-status-red-bg);
+    color: var(--atm-status-red);
+
+}*/
+
+#wpwrap {
+    background-color: #fff;
+}
+#wpcontent {
+    /*padding-left: 0;*/
+    padding-right: 1rem;
+}
+
+#atm-menu {
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#atm-menu ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style-type: none;
+}
+
+#atm-menu ul li {
+    display: inline-block;
+    margin: 0 2rem 0 0;
+}
+
+#atm-menu ul li a {
+    text-decoration: none;
+    color: #666;
+    font-weight: bold;
+}
+
+#atm-menu ul li#cmp-logo a {
+    color: #000;
+    font-size: 1.3em;
+}
+
+#atm-menu .atm-menu-active {
+    color: #ea7826;
+}
+
+#atm-menu #atm-contact {
+    text-align: right;
+}
+
+table.widefat {
+    border-radius: 1rem;
+    border-color: #eee;
+    width: auto;
+    min-width: 700px;
+    padding: 1rem;
+}
+
+.widefat thead td, .widefat thead th {
+    border-bottom: 1px solid #eee;
+}
+
+.widefat tbody td, .widefat tbody th {
+    padding: 1rem 0 0 10px;
+}
+
+.widefat tbody td select {
+    vertical-align: initial;
+}
+
+
+
+
+
+.atm-checkbox-wrapper {
+    display: inline-block;
+}
+
+.atm-checkbox-wrapper .atm-checkbox {
+    appearance: none;
+    background-color: #dfe1e4;
+    border-radius: 72px;
+    border-style: none;
+    flex-shrink: 0;
+    height: 20px;
+    margin: 0;
+    position: relative;
+    width: 30px;
+}
+
+.atm-checkbox-wrapper .atm-checkbox::before {
+    bottom: -6px;
+    content: "";
+    left: -6px;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+}
+
+.atm-checkbox-wrapper .atm-checkbox,
+.atm-checkbox-wrapper .atm-checkbox::after {
+    transition: all 100ms ease-out;
+}
+
+.atm-checkbox-wrapper .atm-checkbox::after {
+    background-color: #fff;
+    border-radius: 50%;
+    content: "";
+    height: 14px;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    width: 14px;
+}
+
+.atm-checkbox-wrapper input[type=checkbox] {
+    cursor: default;
+}
+
+.atm-checkbox-wrapper .atm-checkbox:hover {
+    background-color: #c9cbcd;
+    transition-duration: 0s;
+}
+
+.atm-checkbox-wrapper .atm-checkbox:checked {
+    background-color: var(--atm-orange);
+}
+
+.atm-checkbox-wrapper .atm-checkbox:checked::after {
+    background-color: #fff;
+    left: 13px;
+}
+
+.atm-checkbox-wrapper :focus:not(.focus-visible) {
+    outline: 0;
+}
+
+.atm-checkbox-wrapper .atm-checkbox:checked:hover {
+    background-color: var(--atm-orange-light);
+}
+
+/* Corrects WP behavior */
+.atm-checkbox-wrapper .atm-checkbox:checked::before {
+    content: ""
+}
+
+
+
+/* CONTROLS */
+
+/* Some !important are required to override the WP defaults */
+
+.atmf-input[type=text],
+.atmf-textarea,
+.atmf-field
+{
+    border: 1px solid #ddd !important
+}
+
+.atmf-input[type=text]::placeholder {
+    font-style: italic;
+}
+

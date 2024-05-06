@@ -1,0 +1,16 @@
+#outlook a{padding:0;}
+.ReadMsgBody{width:100%;} .ExternalClass{width:100%;}
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+
+body { font-family: sans-serif; margin: 0; padding: 0; height: 100%!important; width: 100%!important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-line-height-rule: exactly;}
+
+.cmpe-block.cmpe-block-text p {
+    margin-bottom: 1em;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 525px) {
+    /* For grids */
+    .m-mw-100 { max-width: 100%!important; }
+}
+
