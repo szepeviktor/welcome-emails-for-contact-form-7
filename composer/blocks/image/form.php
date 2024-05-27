@@ -5,6 +5,7 @@ defined('ABSPATH') || exit;
 
 $form_type = $options['form_type'];
 ?>
+
 <?php $controls->form_type('form_type', '', ['wp' => 'WP Media', 'url' => 'External URL', 'logo'=>'Site logo']) ?>
 
 <?php if ($form_type === 'wp') { ?>
@@ -12,7 +13,7 @@ $form_type = $options['form_type'];
 <?php } else if ($form_type === 'url') {?>
 <?php $controls->url('external_url', 'Image URL')?>
 <?php } else { ?>
-<?php $controls->text('width', 'Width', ['label_after'=>'px'])?>
+<?php $controls->text('width', __('Width', 'automation') . '&nbsp;(px)')?>
 <?php } ?>
 
 

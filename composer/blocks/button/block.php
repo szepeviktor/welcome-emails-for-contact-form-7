@@ -6,11 +6,12 @@ defined('ABSPATH') || exit;
 
 $url = $options['button_url'];
 $label = $options['button_label'];
-$color = $options['button_color'];
+$color = sanitize_hex_color($options['button_color']);
+$label_color = sanitize_hex_color($options['button_label_color']);
 ?>
 
 <div style="text-align: center">
-    <a rel="noopener" target="_blank" href="<?php echo esc_attr($url); ?>" style="background-color: <?php echo esc_attr($color); ?>; font-size: 18px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; text-decoration: none; padding: 14px 20px; color: #ffffff; border-radius: 5px; display: inline-block; mso-padding-alt: 0;">
+    <a rel="noopener" target="_blank" href="<?php echo esc_attr($url); ?>" style="background-color: <?php echo esc_attr($color); ?>; font-size: 18px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; text-decoration: none; padding: 14px 20px; color: <?php echo esc_attr($label_color); ?>; border-radius: 5px; display: inline-block; mso-padding-alt: 0;">
         <!--[if mso]>
         <i style="letter-spacing: 25px; mso-font-width: -100%; mso-text-raise: 30pt;">&nbsp;</i>
         <![endif]-->

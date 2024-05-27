@@ -4,9 +4,11 @@ div.cmpf-field {
 
 div.cmpf-field input,
 div.cmpf-field select,
-div.cmpf-field textarea
+div.cmpf-field textarea,
+div.cmpf-commons input
 {
     border-color: #ccc;
+    font-size: .85rem;
 }
 
 div.cmpf-field input[type=text],
@@ -18,6 +20,12 @@ div.cmpf-field input[type=url]
 label.cmpf-label {
     display: block;
     color: #666;
+}
+
+.cmpf-form-type {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: .5rem;
+    padding-bottom: .5rem;
 }
 
 .cmpf-commons {

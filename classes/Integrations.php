@@ -50,14 +50,12 @@ class Integrations {
             AutomationApi::register_event_type('cf7_' . sanitize_key($form->id()), 'CF7 Form "' . $form->title() . '" has been submitted', $fields);
         }
 
-        // Reset the CF7 instance otherwise CF7 does not work correcly
+        // Reset the CF7 instance otherwise CF7 does not work correctly
         \WPCF7_ContactForm::get_instance(null);
 
         // Maybe to be replaced with "wpcf7_submit"
         add_action('wpcf7_before_send_mail', function ($form, &$abort, $submission) {
 
-            // To review team: data is from CF7 plugin, we store it on a extra table to send
-            // the notification emails so it can be included with special tags on emails.
             $data = wp_strip_all_tags(wp_unslash($_POST), true);
 
             self::prepare($data);

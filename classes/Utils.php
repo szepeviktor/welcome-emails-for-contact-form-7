@@ -125,4 +125,15 @@ class Utils {
         }
         return $r;
     }
+
+    static function db_get_var($query) {
+        global $wpdb;
+
+        $r = $wpdb->get_var($query);
+        if ($r == null) {
+            Logger::fatal($wpdb->last_error);
+            return false;
+        }
+        return $r;
+    }
 }

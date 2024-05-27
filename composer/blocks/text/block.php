@@ -10,7 +10,6 @@ if ($options['form_type'] === 'plain') {
     $text = wpautop($text);
     $text = str_replace('<p>', '<p style="margin: 0; line-height: inherit; font-family: inherit; font-size: inherit; font-weight: inherit; color: inherit">', $text);
 }
-$text = str_replace('<p>', '<p style="margin: 0; line-height: inherit; font-family: inherit; font-size: inherit; font-weight: inherit; color: inherit">', $text);
 $font = Font::build($options, [], 'font_');
 ?>
 <?php if ($options['form_type'] === 'plain') { ?>

@@ -114,7 +114,7 @@ class Controls {
         $this->input_only($name, $attrs);
 
         if (!empty($attrs['label_after'])) {
-            echo wp_kses($attrs['label_after']);
+            echo wp_kses($attrs['label_after'], null);
         }
 
         $this->_description($attrs['description']);
@@ -245,7 +245,7 @@ class Controls {
     }
 
     public function form_type($name, $label = '', $options = [], $attrs = []) {
-        $this->_open();
+        $this->_open('cmpf-form-type');
         $this->_label($label);
         $value = $this->_value($name);
 
@@ -343,16 +343,16 @@ class Controls {
         echo '<div class="cmpf-commons">';
 
         echo '&larr;';
-        $this->input_only('block_padding_left', ['width' => 40]);
+        $this->input_only('block_padding_left', ['width' => 35]);
 
         echo '&nbsp;&nbsp;&nbsp;&uarr;';
-        $this->input_only('block_padding_top', ['width' => 40]);
+        $this->input_only('block_padding_top', ['width' => 35]);
         echo '&nbsp;&nbsp;&nbsp;';
 
-        $this->input_only('block_padding_bottom', ['width' => 40]);
+        $this->input_only('block_padding_bottom', ['width' => 35]);
         echo '&darr;&nbsp;&nbsp;&nbsp;';
 
-        $this->input_only('block_padding_right', ['width' => 40]);
+        $this->input_only('block_padding_right', ['width' => 35]);
         echo '&rarr;&nbsp;&nbsp;&nbsp;';
 
         $this->color_only('block_background');

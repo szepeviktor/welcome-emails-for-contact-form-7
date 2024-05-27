@@ -85,7 +85,7 @@ class Composer {
                 $class = trim($rules[1][$i]);
                 $value = trim($rules[2][$i]);
                 $value = preg_replace('|\s+|', ' ', $value);
-                $content = str_replace(' inline-class="' . $class . '"', ' style="' . $value . '"', $content);
+                $content = str_replace(' inline-class="' . $class . '"', ' style="' . esc_attr($value) . '"', $content);
             }
         }
         return trim(preg_replace('|<style>.*?</style>|s', '', $content));
@@ -97,9 +97,9 @@ class Composer {
         $block_type = sanitize_key($_REQUEST['type']);
 
         // Get the email wide settings (todo) which affect single blocks
-        $commons = ['block_background' => '#ffffff'];
+        $email_options = ['block_background' => '#ffffff'];
 
-        $options = array_merge($commons, self::get_block_defaults($block_type), self::get_request_options());
+        $options = array_merge($email_options, self::get_block_defaults($block_type), self::get_request_options());
 
         $file = self::get_block_file($block_type, 'block');
         if (!file_exists($file)) {
@@ -174,12 +174,7 @@ class Composer {
         header('Content-Type: application/json;charset=UTF-8');
 
         $id = (int) $_GET['id'];
-        $email = $wpdb->get_row($wpdb->prepare("select * from {$wpdb->prefix}automation_emails where id=%d", $id));
-
-        if ($wpdb->last_error) {
-            //die($wpdb->last_error);
-            die();
-        }
+        $email = Utils::db_get_row($wpdb->prepare("select * from {$wpdb->prefix}automation_emails where id=%d", $id));
 
         self::refresh($email);
 

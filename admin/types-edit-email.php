@@ -65,7 +65,7 @@ foreach ($type->fields as $key => $label) {
     });
 </script>
 
-<h2><?php echo esc_html($type->name) ?></h2>
+<h2><?php echo esc_html($event_type->name) ?></h2>
 <p>
     <a href="?page=automation_types_edit&id=<?php echo esc_attr(urlencode($event_type->id))?>" class="button-secondary">&laquo;</a>
     <input type="button" class="button-primary" id="atm-save-button" value="Save">

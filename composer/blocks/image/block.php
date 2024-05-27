@@ -7,7 +7,7 @@ defined('ABSPATH') || exit;
 <?php if ($options['form_type'] === 'wp') { ?>
 
     <?php
-    $src = plugins_url('composer', __FILE__) . '/blocks/image/placeholder.png';
+    $src = plugins_url('composer', AUTOMATION_DIR . '/automation.php') . '/blocks/image/placeholder.png';
     $height = 400;
     $width = 600;
     if ($options['image']) {

@@ -115,6 +115,18 @@ class EventManager {
             self::save_flow($event_type->id, $flow);
         }
 
+        // Patch
+        if (isset($flow->email_active)) {
+            $flow->email1_active = $flow->email_active;
+        }
+
+        if (isset($flow->email_id)) {
+            $flow->email1_id = $flow->email_id;
+        }
+        $flow->email1_delay = 0;
+        $flow->email1_delay_um = 'd';
+        // Patch end
+
         if (empty($flow->email2_delay_um)) {
             $flow->email2_delay_um = 'd';
             self::save_flow($event_type->id, $flow);

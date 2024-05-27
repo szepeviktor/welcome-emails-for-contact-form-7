@@ -1,7 +1,7 @@
 === Welcome emails for Contact Form 7 ===
 Tags: welcome emails, email series, automation
 Tested up to: 6.5.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Contributors: satollo
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -22,6 +22,15 @@ Your contacts deserve a stunning welcome! With Welcome Emails you can create sty
 * Customizable sender email and name
 * Uses the native WP mailing functionality no need for external services or accounts
 * Compatible with every SMTP plugin (WP Mail SMTP, Fluent SMTP, Offload SES, ...)
+
+= How to partecipate =
+
+There are some main features that need to be developed or improved:
+
+* The composer can be made more user friendly
+* Integrations with other plugins or themes that need to send emails giving the user the possibility to edit them with a composer
+
+Feel free to contact me if you want develope this plugin!
 
 = To Do =
 
@@ -75,7 +84,7 @@ Install [WP Crontrol](https://wordpress.com/plugins/wp-crontrol/) to check the s
 
 = Emails do not look good on Outlook, Gmail, ... =
 
-I do my best to create fully compatibile emails, but clients, especially Outlook and Gmail used to read non
+I do my best to create fully compatible emails, but clients, especially Outlook and Gmail used to read non
 Google mail accounts, have a lot of limitation. Anyway, send us a screenshot using my
 [contact page](https://www.satollo.net/about), we're more than happy to check and solve the problem, is possible.
 
@@ -88,6 +97,20 @@ No, currently emails are only in HTML.
 In my option a welcome email needs to be simple and clear, easy readable on mobile devices and with immediate calls to action.
 And... is was extracted from the original project I've no resources to make it more complex right now (smile).
 
+= Can users unsubscribe from emails? =
+
+No, this is not a mail marketing or newsletter system, but a small series of transactional emails you want to send after a user action.
+In other words, that is not a service to which one can decide to subscribe or unsubscribe (anyway I'm open to discuss a possible evolution).
+
+= Is it possible to track opens and clicks? =
+
+No, this feature is not present.
+
+= Are there API to integrate this plugin with others? =
+
+Right now there are no official API, but I have plans to add API to register custom events and
+probably custom composer blocks.
+
 == Screenshots ==
 
 1. The list of forms to be connected to a welcome email series
@@ -97,12 +120,18 @@ And... is was extracted from the original project I've no resources to make it m
 
 == Changelog ==
 
+= 1.0.2 =
+
+* Fixed image block with "logo" type and placeholder
+* Fixed button block URL and label color
+
 = 1.0.1 =
 
 * Fixed some translatable strings
 * Fixed the wrong "late" status report for the engine
 * Fixed the plugin description
 * Fixed the loading of JS and CSS
+* Added contact on top menu
 
 = 1.0.0 =
 

@@ -4,7 +4,7 @@
   Plugin Name: Welcome Email for CF7
   Plugin URI: https://www.satollo.net/plugins/automation
   Description: Welcome email series for Contact Form 7
-  Version: 1.0.1
+  Version: 1.0.2
   Requires at least: 5.1
   Requires PHP: 7.4
   Author: Stefano Lissa
@@ -21,7 +21,7 @@ use Automation\Composer\Composer as Composer;
 defined('ABSPATH') || exit;
 
 define('AUTOMATION_DIR', __DIR__);
-define('AUTOMATION_VERSION', '1.0.1');
+define('AUTOMATION_VERSION', '1.0.2');
 
 if (!defined('AUTOMATION_ENGINE_INTERVAL')) {
     define('AUTOMATION_ENGINE_INTERVAL', 60 * 15);
@@ -62,7 +62,6 @@ class Automation {
 
         \AutomationApi::init();
 
-        // Does it make sense to initilize them? Or it's better to create a "getAAAManager()"?
         EventManager::init();
         ActionManager::init();
         Composer::init();
